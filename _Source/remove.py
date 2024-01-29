@@ -54,7 +54,8 @@ def hide_console():
     return startupinfo
 
 #Setup.exe location
-src = os.path.join(sys._MEIPASS, "setup.exe")
+#src = os.path.join(sys._MEIPASS, "setup.exe")
+src = os.path.join(os.getcwd(), "setup.exe")
 
 ################################################################################################################################################
 
