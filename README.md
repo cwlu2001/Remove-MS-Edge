@@ -4,34 +4,40 @@
 **Microsoft Edge / Edge WebView uninstallers**
 ```diff
 - Removing Edge may cause update failure loop. 
-  Install Edge, install this update, then remove Edge. 
+  Install Edge, install all Windows updates, then remove Edge. 
 
-- Uninstall WebView2 before running this, then install it again; if needed
- If Edge is installed - WebView2 installs to 'C:\Program Files (x86)\Microsoft\Edge'
- If Edge is not installed - WebView2 installs to 'C:\Program Files (x86)\Microsoft\EdgeWebView'
-
-- Some reports of Windows Defender blocking this. Disable Defender first.
-
-
-Remove-Edge.exe  Remove-EdgeOnly.exe flags
-
-/s  Silent      Do not print anything, or change title of window
-/e  Edge Only   Do not remove WebView
+- Some reports of Windows Defender blocking this. Disable Defender first.  
+ 
+Flags - Remove-Edge.exe  Remove-EdgeOnly.exe
+/s  Silent      Do not print anything, or change title of window  
+/e  Edge Only   Do not remove WebView  
 ```
-
-[Remove-Edge.exe](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Remove-Edge.exe?raw=true) Removes both edge, and WebView.
-
-[Remove-EdgeOnly.exe](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Remove-EdgeOnly.exe?raw=true) Removes edge, does not remove WebView.  
-
-[Remove-Edge_GUI.exe](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Remove-Edge_GUI.exe?raw=true) Full uninstaller with interface (option to omit WebView)  
-
-[Remove-NoTerm.exe](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Remove-NoTerm.exe?raw=true) Remove all Edges only. Completely silent, no terminal, no flags. Useful for Task Schedular.  
-
-[Edge-Appx.bat](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Edge-Appx.bat?raw=true) Remove Appx version of Edge only. Leave Webview / Chrome version alone.  
-
 <br>
 
+**Requires WebView**  
+```
+- Quicken  
+- Xbox App  
+```
+
+**EXE Version**  
+[Remove-EdgeOnly.exe](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Remove-EdgeOnly.exe?raw=true) Removes edge, does not remove WebView.  
+[Remove-Edge_GUI.exe](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Remove-Edge_GUI.exe?raw=true) Full uninstaller with interface (option to omit WebView)  
+[Remove-Edge.exe](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Remove-Edge.exe?raw=true) Removes both edge, and WebView.  
+[Remove-NoTerm.exe](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Remove-NoTerm.exe?raw=true) Remove all Edges only. Completely silent, no terminal, no flags. Useful for Task Schedular.  
+<br>
+
+**Batch Version**  (Requires internet or file from _Source)  
+[Both](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Batch/Both.bat?raw=true) Removes both Edge, and WebView.  
+[Edge](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Batch/Edge.bat?raw=true) Removes Edge only.  
+[Edge-Appx](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/Batch/Edge-Appx.bat?raw=true) Remove Appx version of Edge only. Leave Webview / Chrome version alone.  
+<br>
+
+The batch version requires an internet connection to download a file.  
+To make it work without internet, download [setup.exe](https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/_Source/setup.exe?raw=true), from _Source and keep it next to the .bat
+
 Re-Install Edge: [Small DL](https://www.microsoft.com/en-us/edge/download?form=MA13FJ)  /  [Full DL](https://www.microsoft.com/en-us/edge/business/download?form=MA13FJ)  
+<br>
 
+![Screenshot_GUI](https://github.com/ShadowWhisperer/Remove-MS-Edge/assets/61057625/247433f9-cb20-4cfc-9c13-bf022ecb4dda)
 
-<img src="https://github.com/ShadowWhisperer/Remove-MS-Edge/blob/main/_Source/Screenshot_GUI.PNG"/>
